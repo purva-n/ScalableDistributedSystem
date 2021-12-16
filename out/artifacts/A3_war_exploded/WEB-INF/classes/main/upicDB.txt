@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS upic;
+
+CREATE TABLE IF NOT EXISTS resorts (
+    resortID INT PRIMARY KEY,
+    name VARCHAR(25) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS liftrides (
+    rideID INT PRIMARY KEY AUTO_INCREMENT,
+    skierID INT NOT NULL,
+    resortID INT NOT NULL,
+    tID INT NOT NULL,
+    liftID INT NOT NULL
+);
+
+INSERT INTO resorts (resortID, name)
+VALUES (1, "Blue-Hills");
+INSERT INTO resorts (resortID, name)
+VALUES (2, "Nashoba");
+INSERT INTO resorts (resortID, name)
+VALUES (3, "Wachusett");
+INSERT INTO resorts (resortID, name)
+VALUES (4, "Catamount");
+INSERT INTO resorts (resortID, name)
+VALUES (5, "Jiminy-Peak");
+
